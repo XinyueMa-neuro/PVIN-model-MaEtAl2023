@@ -7,7 +7,7 @@
 
 In this repository is the code associated with the following paper:
 
-Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." *bioRxiv* (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
+>Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." *bioRxiv* (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
 
 The code can be used to produce the time series simulations and bifurcation analysis of PVIN model.
   
