@@ -1,0 +1,78 @@
+﻿# PVIN_2023.ode
+#
+# This code is for the parvalbumin-expressing interneuron (PVIN) model
+# used in the publication:
+# Ma, X., Miraucourt, L., Qiu, H., Sharif-Naeini, R., Khadra, A. (2023). 
+# Calcium buffering tunes intrinsic excitability of spinal dorsal horn 
+# parvalbumin-expressing interneurons: A computational model.
+#
+# naive condition: Bt=90 | CCI condition: Bt=10
+# 
+# To reproduce the one-parameter bifurcation diagrams in Fig. 5
+# delete the ode of variable "Cai" and set it as a parameter "par Cai=0"
+
+# -------- Equations
+dV/dt=(-gNa*mmax^3*h*(V-Vna)-gKv1*n1^4*(V-VK)-gKv3*n3^2*(V-VK)-gCa*amax^2*(V-VCa)-gSK*k*(V-VK)-gleak*(V-Vleak)+Iapp)/Cm
+
+# -- Na channel
+mmax=1/(1+exp((V-Vm)/Sm))
+par Vm=-17.5,Sm=-11.4
+
+dh/dt=ah*(1-h)-bh*h
+ah=Aah/(exp((V-Vah)/Sah))
+bh=Abh*(V-Vbh)/(1-exp((V-Vbh)/Sbh))
+par Aah=0.0025,Sah=10.00,Vah=23.00
+par Abh=0.0940,Sbh=-5.500,Vbh=-31.00
+
+# -- HVA Ca channel
+amax=1/(1+exp((V-Va)/Sa))
+par Va=3.0,Sa=-10.4
+
+# -- Kv1
+dn1/dt=an1*(1-n1)-bn1*n1
+an1=Aan1*(V-Van1)/(1-exp((V-Van1)/San1))
+bn1=Abn1/exp((V-Vbn1)/Sbn1)
+par Aan1=0.002,Van1=-30.00,San1=-9.00
+par Abn1=0.017,Vbn1=-35.00,Sbn1=5.90
+
+# -- Kv3
+dn3/dt=an3*(1-n3)-bn3*n3
+an3=Aan3*(V-Van3)/(1-exp((V-Van3)/San3))
+bn3=Abn3/exp((V-Vbn3)/Sbn3)
+par Aan3=1.98,Van3=96.00,San3=-12.60
+par Abn3=0.34,Vbn3=-36.00,Sbn3=10.50
+
+# -- SK channel
+k=Cai^nk/(ksk^nk+Cai^nk)
+par ksk=0.8
+par nk=5
+
+# -------- Calcium dynamics & calcium buffer
+dCai/dt=(-(gCa*amax^2*(V-VCa))/(2*F*mArea*d)-pgamma*(Cai-Car))/(1+Bt/KD)
+
+par Bt=90
+par KD=0.1
+
+# Initial conditions
+init V=-44.744199147517413
+init H=0.948852973441895
+init N1=0.179680791108751
+init N3=0.013424385638213
+init CAI=0.070000000000000
+
+# Parameters
+par Iapp=100
+par Cm=30
+par Vleak=-50,VNa=58,VK=-80,VCa=68
+par gleak=8,gNa=300,gKv1=15,gKv3=180,gCa=8,gSK=10
+par F=0.096485332100000,mArea=3000,d=0.1,pgamma=0.01,Car=0.07
+
+# Integration parameters
+@ dt=0.01,bounds=40000,total=1000,T0=0,transient=0.01
+@ xlo=0,xhi=1000,ylo=-60,yhi=30,
+@ xp=t,yp=v
+@ method=Runge-Kutta
+@ OUTPUT=stable.dat
+@ Ntst=150,Nmax=20000,Ds=0.1,Dsmin=0.001,Dsmax=0.5,ParMin=0,ParMax=1500
+
+done
