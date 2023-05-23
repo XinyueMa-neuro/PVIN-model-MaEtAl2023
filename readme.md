@@ -1,32 +1,34 @@
-<head>
-<style>
-th, td {
-  border-color: #FFFFFF;
-}
-th, tfoot td {
-    font-weight: normal;
-    text-align: left
-}
-</style>
-</head>
 
-<body>
-<p>This is the readme for the models associated with the manuscript in preparation: </p>
+![GitHub all releases](https://img.shields.io/github/downloads/XinyueMa-neuro/PVIN-model-MaEtAl2023/total)
+![GitHub followers](https://img.shields.io/github/followers/XinyueMa-neuro?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/XinyueMa-neuro/PVIN-model-MaEtAl2023?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/XinyueMa-neuro/PVIN-model-MaEtAl2023?style=social)
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FXinyueMa_neuro) 
 
-<p>&emsp;"Ma, X., Miraucourt, L., Qiu, H., Sharif-Naeini, R., Khadra, A. (2023). Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." </p>
+In this repository is the code associated with the following paper:
 
-<p>The code can be used to produce the time series simulations and bifurcation analysis of PVIN model.</p>
+Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." *bioRxiv* (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
 
+The code can be used to produce the time series simulations and bifurcation analysis of PVIN model.
+  
+---
 <p>
----------------------------------------------<br>
 Author: Xinyue Ma <br>
 Email: xinyue.ma@mail.mcgill.ca <br>
 Integrated Program in Neuroscience <br>
 McGill University <br>
 Montreal, QC, H3A 1A1 <br> 
 Canada <br>
----------------------------------------------
 </p>
+
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+To reference this code, please cite the journal article mentioned above.
+
+---
 
 <h2>I. Description</h2>
 <p>
@@ -50,99 +52,81 @@ The code also includes a “in vivo-like” neural circuit model of A&#946 fiber
     XPPAUT Version: 8.0 <br>
     Time-stamp: 2023-March-05 <br>
 
+  
 <h2>III. File list</h2>
-<h3>XPP</h3>
+ 
+### XPP
 <p>
     <table style="width:100%">
         <tr>
-            <th>PVIN_2023.ode</th>
+            <th><code>PVIN_2023.ode</code></th>
             <th>PVIN model for time series simulations</th>
         </tr>
     </table>
-<!--
-&emsp;PVIN_2023.ode    &emsp;   PVIN model for time series simulations and one-parameter bifurcation analysis
-//-->
 </p>
-<h3>MATLAB</h3>
+
+### MATLAB
+
 <p>
-    <table style="width:100%">
+  <table style="width:100%">
         <tr>
-            <th>PVIN_STEP_Simu.m</th>
-            <th>Example code to generate step current-stimulated voltage response of PVINs, as in Figs. 2,3 & 5 in Ma et al. 2023</th>
+            <th><code>PVIN_STEP_Simu.m</code></th>
+            <th>Example code to generate step current-stimulated voltage response of PVINs, as in *Figs. 2,3 & 5* in *Ma et al. 2023*</th>
         </tr>
         <tr>
-            <th>PVIN_Syn_Simu.m</th>
-            <th>Example code to generate Poisson-distributed synaptic current-stimulated voltage response of PVINs, as in Fig. 9 in Ma et al. 2023</th>
+            <th><code>PVIN_Syn_Simu.m</code></th>
+            <th>Example code to generate Poisson-distributed synaptic current-stimulated voltage response of PVINs, as in *Fig. 9* in *Ma et al. 2023*</th>
         </tr>    
         <tr>
-            <th>PVIN_TwoParBifur.m</th>
-            <th>Example code to reproduce the two-parameter bifurcation diagram shown in Fig. 8 in Ma et al. 2023</th>
+            <th><code>PVIN_TwoParBifur.m</code></th>
+            <th>Example code to reproduce the two-parameter bifurcation diagram shown in *Fig. 8* in *Ma et al. 2023*</th>
         </tr>      
         <tr>
-            <th>NeuralCircuit.mlx</th>
-            <th>Example code to simulate the spinal dorsal neural circuit model, as in Fig. 9 in Ma et al. 2023</th>
+            <th><code>NeuralCircuit.mlx</code></th>
+            <th>Example code to simulate the spinal dorsal neural circuit model, as in *Fig. 9* in *Ma et al. 2023*</th>
         </tr>
         <tr>
-            <th>PVIN_HH.m</th>
+            <th><code>PVIN_HH.m</code></th>
             <th>ODEs of PVIN model</th>
         </tr>
         <tr>
-            <th>ePKCmodel.m</th>
+            <th><code>ePKCmodel.m<./code></th>
             <th>ODEs of ePKC&#947 interneuron model</th>
         </tr>      
         <tr>
-            <th>PVIN_Cai.m</th>
+            <th><code>PVIN_Cai.m</code></th>
             <th>Function: MATCONT equations of PVIN model</th>
         </tr>
         <tr>
-            <th>PVIN_Cai.mat</th>
+            <th><code>PVIN_Cai.mat</code></th>
             <th>Function: MATCONT variables of PVIN model</th>
         </tr>
         <tr>
-            <th>runHHmodel_STEP.m</th>
+            <th><code>runHHmodel_STEP.m</code></th>
             <th>Function: Step current stimulation protocol of PVIN model</th>
         </tr>
         <tr>
-            <th>runHHmodel_AbetaPoisson.m</th>
+            <th><code>runHHmodel_AbetaPoisson.m</code></th>
             <th>Function: Synaptic current stimulation protocol of PVIN model</th>
         </tr>
         <tr>
-            <th>mySynInput.m</th>
+            <th><code>mySynInput.m</code></th>
             <th>Function: Generate the time series of AMPA and NMDA conductances at customized firing rate</th>
         </tr>
         <tr>
-            <th>poissonSpikeGen.m</th>
+            <th><code>poissonSpikeGen.m</code></th>
             <th>Function: Generate Poisson-distributed timing of spike trains</th>
         </tr>
         <tr>
-            <th>factor_syn.m</th>
+            <th><code>factor_syn.m</code></th>
             <th>Function: Generate a factor to correct the exponential equation peaks at 1</th>
         </tr>
         <tr>
-            <th>genSyn.m</th>
+            <th><code>genSyn.m</code></th>
             <th>Function: Generate the time series of a customized synaptic conductance</th>
         </tr>
-
-    </table>
-
-<!--
-&emsp;PVIN_STEP_Simu.m   &emsp;   Example code to generate step current-stimulated voltage response of PVINs, as shown in Fig. 2-4 <br>
-&emsp;PVIN_Syn_Simu.m    &emsp;      Example code to generate Poisson-distributed synaptic current-stimulated voltage response of PVINs, as shown in Fig. 7 <br>
-&emsp;PVIN_TwoParBifur.m    &emsp;       Example code to reproduce the two-parameter bifurcation diagram in Fig. 6 <br>
-&emsp;NeuralCircuit.mlx  &emsp;          Example code to simulate the spinal dorsal neural circuit model, as shown in Fig. 7 <br>
-&emsp;PVIN_HH.m          &emsp;    ODEs of PVIN model  <br>
-&emsp;ePKCmodel.m        &emsp;    ODEs of ePKC&#947 interneuron model  <br>  
-&emsp;PVIN_Cai.m         &emsp;    Function: MATCONT equations of PVIN model  <br>
-&emsp;PVIN_Cai.mat       &emsp;    Function: MATCONT variables of PVIN model  <br>
-&emsp;runHHmodel_STEP.m  &emsp;    Function: Step current stimulation protocol of PVINs  <br>
-&emsp;runHHmodel_AbetaPoisson.m   &emsp; Function: Synaptic current stimulation protocol of PVINs  <br>
-&emsp;mySynInput.m       &emsp;    Function: Generate the time series of AMPA and NMDA conductances at customized firing rate  <br>
-&emsp;poissonSpikeGen.m  &emsp;    Function: Generate Poisson-distributed timing of spike trains  <br>
-&emsp;factor_syn.m       &emsp;    Function: Generate a factor to correct the exponential equation peaks at 1
-&emsp;genSyn.m           &emsp;    Function: Generate the time series of a customized synaptic conductance
-//-->
-</p>
-
+      </table>
+  </p>
 
 <h2>IV. Instruction</h2>
 <h3>XPPAUT<h3>
@@ -187,22 +171,13 @@ The code also includes a “in vivo-like” neural circuit model of A&#946 fiber
 <p><img src="./Figures/example_twopar.png" alt="PVIN model two-parameter bifurcation analysis" style="width:600px;height:600px;"></p>
 
 <h4>&emsp;Simulate the PVIN embedded neural circuit model</h4>
-<p>Open and run <Code>NeuralCircuit.mlx</Code>. This is a livescript presenting the simulation steps of the neural circuit model associated with Fig. 9 in Ma et al. 2023. The steps include: <br>
+<p>Open and run <Code>NeuralCircuit.mlx</Code>. This is a livescript presenting the simulation steps of the neural circuit model associated with Fig. 9 in Ma et al. 2023. The steps include: <br><p>
 <ol>
     <li>Create Poisson-distributed synaptic conductances representing the presynaptic input from A&#946 fibers </li>
-    <img src="./Figures/example_nc_abeta.png" alt="neural circuit model: Abeta fibersr" style="width:600px;height:a00px;"></p>
-
+    <img src="./Figures/example_nc_abeta.png" alt="neural circuit model: Abeta fibersr" style="width:600px;height:a00px;">
     <li>Simulate the PVIN model using synaptic currents from A&#946 fibers</li>
-    <img src="./Figures/example_nc_pvin.png" alt="neural circuit model: PVIN" style="width:600px;height:100px;"></p>
-   
+    <img src="./Figures/example_nc_pvin.png" alt="neural circuit model: PVIN" style="width:600px;height:100px;">   
     <li>Simulate the PKC&#947 model using synaptic currernts from A&#946 fibers and PVIN model</li>
-    <img src="./Figures/example_nc_pkcg.png" alt="neural circuit model: PKCgammaIN" style="width:600px;height:100px;"></p>
-
+    <img src="./Figures/example_nc_pkcg.png" alt="neural circuit model: PKCgammaIN" style="width:600px;height:100px;">
 </ol>
-<p>
 
-</p>
-
-**************************************************************************************************
-
-</body>
