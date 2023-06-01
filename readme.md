@@ -4,11 +4,12 @@
 ![GitHub followers](https://img.shields.io/github/followers/XinyueMa-neuro?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/XinyueMa-neuro/PVIN-model-MaEtAl2023?style=social)
 ![GitHub Repo stars](https://img.shields.io/github/stars/XinyueMa-neuro/PVIN-model-MaEtAl2023?style=social)
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FXinyueMa_neuro) 
+![Twitter Follow](https://img.shields.io/twitter/follow/XinyueMa_neuro?style=social)
+
 
 In this repository is the code associated with the following paper:
 
->Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." *bioRxiv* (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
+>Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." bioRxiv (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
 
 The code can be used to produce the time series simulations and bifurcation analysis of PVIN model.
   
