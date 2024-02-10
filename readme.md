@@ -9,7 +9,7 @@
 
 In this repository is the code associated with the following paper:
 
->Ma, Xinyue, et al. "Calcium buffering tunes intrinsic excitability of spinal dorsal horn parvalbumin-expressing interneurons: A computational model." bioRxiv (2023): 2023-03. doi: https://www.biorxiv.org/content/10.1101/2023.03.05.531043v1; (The Journal of Neuroscience, <b>accepted</b>)
+>**Ma, X.**, Miraucourt, L. S., Qiu, H., Sharif-Naeini, R., & Khadra, A. (2023). Modulation of SK channels via calcium buffering tunes intrinsic excitability of parvalbumin interneurons in neuropathic pain: A computational and experimental investigation. Journal of Neuroscience, 43(31), 5608-5622.
 
 The code can be used to produce the time series simulations and bifurcation analysis of PVIN model.
   
